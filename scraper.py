@@ -20,14 +20,13 @@ with requests.session() as session:
         process += 1
         print((process / len(TICKs)) * 100, ' %')
         
-        # Получение котировок на определенную дату
         data = apimoex.get_board_history(session, TICK, board=board, start=yesterday, end=yesterday)
         
         if data:
             df = pd.DataFrame(data)
             df = df[['TRADEDATE', 'CLOSE']]
             for index, row in df.iterrows():
-                ticker_data = "{}, {}\n".format(TICK, row['CLOSE'])  # Изменили запись на тикер вместо даты
+                ticker_data = "{}, {}\n".format(TICK, row['CLOSE']) 
                 output_file.write(ticker_data)
         else:
             print(f"No data for {TICK}")
