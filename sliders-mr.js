@@ -1,14 +1,14 @@
-const rangeThumb = document.getElementById('range-thumb-mr');
-const rangeNumber = document.getElementById('range-number-mr');
-const rangeLine = document.getElementById('range-line-mr');
-const rangeInput = document.getElementById('range-input-mr');
+const rangeThumbMr = document.getElementById('range-thumb-mr');
+const rangeNumberMr = document.getElementById('range-number-mr');
+const rangeLineMr = document.getElementById('range-line-mr');
+const rangeInputMr = document.getElementById('range-input-mr');
 
-const updateRangeSlider = () => {
-    rangeNumber.textContent = rangeInput.value;
-    const thumbPosition = (rangeInput.value / rangeInput.max);
-    const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
-    rangeThumb.style.left = (thumbPosition * space) + 'px';
-    rangeLine.style.width = rangeInput.value + '%';
+const updateRangeSliderMr = () => {
+    rangeNumberMr.textContent = rangeInputMr.value;
+    const thumbPosition = (rangeInputMr.value / rangeInputMr.max);
+    const space = rangeInputMr.offsetWidth - rangeThumbMr.offsetWidth;
+    rangeThumbMr.style.left = (thumbPosition * space) + 'px';
+    rangeLineMr.style.width = rangeInputMr.value + '%';
 }
-rangeInput.addEventListener('input', updateRangeSlider);
-updateRangeSlider();
+rangeInputMr.addEventListener('input', updateRangeSliderMr);
+updateRangeSliderMr();

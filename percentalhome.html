@@ -13,9 +13,8 @@
     <script src="/node_modules/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
       <div class="head">
-        <span class="percental">percental</span>
+        <button class="percental">percental</button></a>
         <div class="logo"></div>
         <div class="line"></div>
       </div>
@@ -27,7 +26,6 @@
               <div class="initial-investment-value">
                 <span class="range__value-number-ii" id="range-number-ii">0</span>
                 <span class="ruble-ii"> ₽</span>
-                <div class="edit-img-ii"></div>
               </div>
               <div class="range-ii">
                 <div class="range__content-ii">
@@ -52,10 +50,9 @@
           <div class="monthly-reinvestment">
             <span class="monthly-reinvestment-text">Ежемесячное пополнение:</span>
             <div class="container-mr">
-              <div class="initial-investment-value">
+              <div class="monthly-reinvestment-value">
                 <span class="range__value-number-mr" id="range-number-mr">0</span>
                 <span class="ruble-mr"> ₽</span>
-                <div class="edit-img-mr"></div>
               </div>
               <div class="range-mr">
                 <div class="range__content-mr">
@@ -65,7 +62,7 @@
                   <div class="range__thumb-mr" id="range-thumb-mr">
                     <div class="range__value-mr"></div>
                   </div>
-                  <input type="range" class="range__input-mr" id="range-input-mr" min="1" max="1000000" value="1" step="1"/>
+                  <input type="range" class="range__input-mr" id="range-input-mr" min="0" max="10000" value="0" step="1"/>
                 </div>
               </div>
             </div>
@@ -78,63 +75,84 @@
             </div>
           </div>
           <div class="time-period">
-            <span class="time-period-text">Срок инвестирования:</span>
-            <div class="time-period-value">
-              <span class="final-value-tp">5 лет</span>
-              <div class="edit-img-tp"></div>
+            <span class="time-period-text">Срок инвестиций (лет):</span>
+            <div class="container-tp">
+              <div class="time-period-value">
+                <span class="range__value-number-tp" id="range-number-tp">3</span>
+              </div>
+              <div class="range-tp">
+                <div class="range__content-tp">
+                  <div class="range__slider-tp">
+                    <div class="range__slider-line-tp" id="range-line-tp"></div>
+                  </div>
+                  <div class="range__thumb-tp" id="range-thumb-tp">
+                    <div class="range__value-tp"></div>
+                  </div>
+                  <input type="range" class="range__input-tp" id="range-input-tp" min="0" max="32" value="0" step="1"/>
+                </div>
+              </div>
             </div>
+            <script src="/sliders-tp.js"></script>
             <div class="values-tp">
-              <span class="3y">3</span>
-              <span class="5y">5</span>
-              <span class="10y">10</span>
-              <span class="15y">15</span>
-              <span class="30y">30</span>
+              <span class="zero">0</span>
+              <span class="five">5</span> 
+              <span class="ten">10</span>
+              <span class="fiveteen">15</span>
+              <span class="twenty">20</span>
+              <span class="twentyfive">25</span>
+              <span class="thirty">30</span>
             </div>
           </div>
         </div>
-       <div class="right-container">
+        <div class="right-container">
         <div class="investmet-goal">
           <span class="investmet-goal-text">Цель инвестиций:</span>
-          <div class="choises-ig">
-            <div class="ch1-ig">
-              <span class="passiv-income">Пассивный доход</span>
-              <div class="dot1-ig"></div>
-            </div>
-            <div class="ch2-ig">
-              <span class="savings">Сохранение сбережений</span>
-              <div class="dot2-ig"></div>
-            </div>
-            <div class="ch3-ig">
-              <span class="pansion-savings">Пенсионные накопления</span>
-              <div class="dot3-ig"></div>
-            </div>
-          </div>
+          <ul class="investmet-goal-choices">
+            <li>
+                <label
+                    ><input type="radio" name="question0" value="A" /><span>Пассивный доход</span></label>
+            </li>
+            <li>
+              <label
+                  ><input type="radio" name="question0" value="B" /><span>Сохранение сбережений</span></label>
+            </li>
+            <li>
+              <label
+                  ><input type="radio" name="question0" value="C" /><span>Пенсионные накопления</span></label>
+            </li>  
+          </ul>
         </div>
         <div class="importance">
-          <span class="importancel-text">Укажите, что для вас важнее:</span>
-          <div class="choises-i">
-            <div class="ch1-i">
-              <span class="stability">Стабильность</span>
-              <div class="dot1-i"></div>
+          <span class="importance-text">Укажите, что для вас важнее:</span>
+          <ul class="importance-choices">
+            <div class="left-ic">
+              <li>
+                  <label
+                      ><input type="radio" name="question2" value="A" /><span>Стабильность</span></label>
+              </li>
+              
+              <li>
+                <label
+                    ><input type="radio" name="question2" value="C" /><span>Высокий доход</span></label>
+              </li>  
             </div>
-            <div class="ch2-i">
-              <span class="balance">Баланс</span>
-              <div class="dot2-i"></div>
+            <div class="right-ic">
+              <li>
+                <label
+                    ><input type="radio" name="question2" value="B" /><span>Баланс</span></label>
+              </li>
+              <li>
+                <label
+                    ><input type="radio" name="question2" value="D" /><span>Максимальная устойчивость</span></label>
+              </li> 
             </div>
-            <div class="ch3-i">
-              <span class="high-income">Высокий доход</span>
-              <div class="dot3-i"></div>
-            </div>
-            <div class="ch4-i">
-              <span class="max-stabiliry">Максимальная устойчивость</span>
-              <div class="dot4-i"></div>
-            </div>
-          </div>
+          </ul>
         </div>
-        <div class="results-button">
-          <span class="results-button-text">К результатам!</span>
-        </div>
+        <a href="/percentalresult.html"><button class="results-btn">К результатам!</button></a>
+        
       </div>
-    </div>
-  </body>
+      <div class="linebottom">
+
+      </div>
+   </body>
 </html>

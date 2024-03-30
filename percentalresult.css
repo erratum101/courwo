@@ -1,693 +1,143 @@
 :root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-      "Source Han Sans CN", sans-serif;
+    --default-font-family: -apple-system;
   }
-  
-  .main-container {
-    overflow: hidden;
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
   }
-  
-  .main-container,
-  .main-container * {
-    box-sizing: border-box;
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+      display: block;
   }
-  
-  input,
-  select,
-  textarea,
-  button {
-    outline: 0;
+  body {
+      line-height: 1;
   }
-  
-  .main-container {
-    position: relative;
-    width: 434px;
-    height: 932px;
-    margin: 0 auto;
-    background: #2c423f;
-    overflow: hidden;
+  ol, ul {
+      list-style: none;
   }
-  .flex-row-c {
-    display: flex;
+  blockquote, q {
+      quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+      content: '';
+      content: none;
+  }
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  body{
+    background-color: #2C423F;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+  }
+  
+  .head{
+    display: block;
     position: relative;
-    width: 175px;
-    height: 38px;
-    margin: 9px 0 0 29px;
-    z-index: 3;
-    background-color: #4C5B61;
+    width: 100%;
+    height: 52px;
+    padding: 10px 0;
+  }
+  .logo{
+    flex-shrink: 0;
+    position: absolute;
+    width: 45px;
+    height: 36px;
+    top: 10px;
+    left: 20px;
+    background: url(./lib/images/logo.svg)
   }
   .percental{
-    flex-shrink: 0;
-    position: relative;
-    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    color: #C5C5C5;
     font-family: SF Pro expanded , var(--default-font-family);
     font-weight: 200;
     font-size: 24px;
     line-height: 13px;
-    z-index: 72;
+    left: 75px;
+    top: 19px;
+    transition: 0.3s;
   }
+  @media(hover: hover){
+    .percental:hover{
+        color: #ffffff;
   
+    }
+  }
+  @media(hover: none){
+    .percental:active{
+        color: #ffffff;
+    }
+  }
   .line{
-    position: relative;
+    position: absolute;
     height: 1px;
     width: 100%;
     background-color: #4C5B61;
-  }
-  .logo{
-    flex-shrink: 0;
-    position: relative;
-    width: 45px;
-    height: 36px;
-    background: url(./lib/images/logo.svg);
-    background-size: cover;
-    z-index: 12;
-  }
-  .flex-row-db {
-    position: relative;
-    width: 375px;
-    height: 199px;
-    top: 50px;
-    left: 28px;
-    z-index: 43;
-  }
-  .strategy-name {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 24px;
-    font-weight: 410;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 43;
-
-  }
-  .strategy {
-    position: relative;
-    top: 50px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 200;
-    line-height: 16px;
-    text-align: left;
-
-  }
-  .final-portfolio-value {
-    display: block;
-    position: relative;
-    height: 31px;
-    margin: 500px 0 0 28px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 17px;
-    font-weight: 650;
-    line-height: 31px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.34px;
-    z-index: 44;
-  }
-  .flex-row-c-1 {
-    position: relative;
-    width: 368px;
-    height: 51px;
-    margin: -10px 0 0 29px;
-    z-index: 46;
-  }
-  .no-brokerage-fee {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    height: 31px;
-    top: 0;
-    left: 0;
-    color: #c5c5c5;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 14px;
-    font-weight: 270;
-    line-height: 31px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.28px;
-    z-index: 45;
-  }
-  .amount {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 175px;
-    height: 31px;
-    top: 20px;
-    left: 193px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 31px;
-    text-align: right;
-    white-space: nowrap;
-    letter-spacing: 0.4px;
-    z-index: 46;
-  }
-  .potential-returns {
-    display: block;
-    position: relative;
-    height: 31px;
-    margin: 10px 0 0 28px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 31px;
-    text-align: left;
-    white-space: nowrap;
-    letter-spacing: 0.4px;
-    z-index: 47;
-  }
-  .rectangle {
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 298px;
-    left: 28px;
-    background: #949b96;
-    border: 3px solid #cad0cf;
-    z-index: 19;
-    border-radius: 17px;
-  }
-  .rubl {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    top: 5px;
-    left: 6px;
-    background: url(./lib/images/Rubl.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 20;
-    border-radius: 12px;
-  }
-  .flex-column-cd {
-    position: absolute;
-    width: 282.2px;
-    height: 32.436px;
-    top: 5.341px;
-    left: 44.8px;
-    font-size: 0px;
-    z-index: 24;
-  }
-  .percentage{
-    position: absolute;
-    width: 175px;
-    height: 31px;
-    left: 220px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 31px;
-    text-align: right;
-    white-space: nowrap;
-    letter-spacing: 0.4px;
-    z-index: 46;
-  }
-  .negative-percentage {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    width: 159px;
-    height: 12px;
-    margin: 18.659px 0 0 123.2px;
-    color: #e85a50;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 270;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 23;
-  }
-  .quantity {
-    display: block;
-    position: relative;
-    height: 11.759px;
-    margin: -9.982px 0 0 0;
-    color: #c5c5c5;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 410;
-    line-height: 11.759px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 24;
-  }
-  .ruble {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    height: 16.282px;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 540;
-    line-height: 13px;
-    text-align: left;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 21;
-  }
-  .dot-rupee {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 159px;
-    height: 12px;
-    top: 2.659px;
-    left: 123.2px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 22;
-  }
-  .flex-row-cc {
-    position: absolute;
-    width: 369.469px;
-    height: 389.636px;
-    top: 298px;
-    left: 28px;
-    z-index: 32;
-  }
-  .slider {
-    position: absolute;
-    width: 17.469px;
-    height: 389.636px;
-    top: 0;
-    left: 352px;
-    background: url(./lib/images/slider.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 32;
-    border-radius: 5px;
-  }
-  .rectangle-2 {
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 220px;
-    left: 0;
-    background: #949b96;
-    border: 3px solid #cad0cf;
-    z-index: 5;
-    border-radius: 17px;
-  }
-  .dollar {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    top: 5.091px;
-    left: 5px;
-    background: url(./lib/images/Dollar.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 6;
-    border-radius: 12px;
-  }
-  .flex-column-dedc {
-    position: absolute;
-    width: 282.2px;
-    height: 32.728px;
-    top: 5.172px;
-    left: 44.8px;
-    font-size: 0px;
-    z-index: 10;
-  }
-  .plus-percent {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    width: 159px;
-    height: 12px;
-    margin: 18.828px 0 0 123.2px;
-    color: #81eb7f;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 270;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 9;
-  }
-  .quantity-3 {
-    display: block;
-    position: relative;
-    height: 11.865px;
-    margin: -9.965px 0 0 0;
-    color: #c5c5c5;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 410;
-    line-height: 11.865px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 10;
-  }
-  .dollar-4 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    height: 16.429px;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 540;
-    line-height: 13px;
-    text-align: left;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 7;
-  }
-  .dot-rupee-5 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 159px;
-    height: 12px;
-    top: 2.828px;
-    left: 123.2px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 8;
-  }
-  .rectangle-6 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 353px;
-    left: 28px;
-    border: 3px dashed #000000;
-    z-index: 41;
-    border-radius: 17px;
-  }
-  .ai-commentary {
-    flex-shrink: 0;
-    position: relative;
-    height: 43px;
-    color: #000000;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 760;
-    line-height: 43px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 41;
-  }
-  .rectangle-7 {
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 408px;
-    left: 28px;
-    background: #949b96;
-    border: 3px solid #cad0cf;
-    z-index: 26;
-    border-radius: 17px;
-  }
-  .euro {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    top: 4.941px;
-    left: 5px;
-    background: url(./lib/images/Euro.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 27;
-    border-radius: 12px;
-  }
-  .flex-column-b {
-    position: absolute;
-    width: 282.2px;
-    height: 31.839px;
-    top: 5.075px;
-    left: 44.8px;
-    font-size: 0px;
-    z-index: 31;
-  }
-  .plus-percent-8 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    width: 159px;
-    height: 12px;
-    margin: 17.925px 0 0 123.2px;
-    color: #81eb7f;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 270;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 30;
-  }
-  .text-13 {
-    display: block;
-    position: relative;
-    height: 11.549px;
-    margin: -9.636px 0 0 0;
-    color: #c5c5c5;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 410;
-    line-height: 11.549px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 31;
-  }
-  .euro-9 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    height: 15.991px;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 540;
-    line-height: 13px;
-    text-align: left;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 28;
-  }
-  .rubles {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 159px;
-    height: 11px;
-    top: 1.925px;
-    left: 123.2px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 11px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 29;
-  }
-  .rectangle-a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 463px;
-    left: 28px;
-    border: 3px dashed #000000;
-    z-index: 40;
-    border-radius: 17px;
-  }
-  .ai-comment-in-progress {
-    flex-shrink: 0;
-    position: relative;
-    height: 43px;
-    color: #000000;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 760;
-    line-height: 43px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 40;
-  }
-  .rectangle-b {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 573px;
-    left: 28px;
-    border: 3px dashed #000000;
-    z-index: 39;
-    border-radius: 17px;
-  }
-  .ai-comment-in-progress-c {
-    flex-shrink: 0;
-    position: relative;
-    height: 43px;
-    color: #000000;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 760;
-    line-height: 43px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 39;
-  }
-  .rectangle-d {
-    position: absolute;
-    width: 340px;
-    height: 50px;
-    top: 628px;
-    left: 28px;
-    background: #949b96;
-    border: 3px solid #cad0cf;
-    z-index: 12;
-    border-radius: 17px;
-  }
-  .yandex {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    top: 5.298px;
-    left: 5px;
-    background: url(./lib/images/Яндекс.png)
-      no-repeat center;
-    background-size: cover;
-    z-index: 17;
-    border-radius: 12px;
-  }
-  .flex-column-fbfa {
-    position: absolute;
-    width: 283.119px;
-    height: 32.126px;
-    top: 5.963px;
-    left: 43.881px;
-    font-size: 0px;
-    z-index: 16;
-  }
-  .negative-percent {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    width: 159px;
-    height: 11px;
-    margin: 19.037px 0 0 124.119px;
-    color: #e85a50;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 16px;
-    font-weight: 270;
-    line-height: 11px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 15;
-  }
-  .stock-50 {
-    display: block;
-    position: relative;
-    height: 11.653px;
-    margin: -9.565px 0 0 0;
-    color: #c5c5c5;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 15px;
-    font-weight: 410;
-    line-height: 11.653px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 16;
-  }
-  .yandex-e {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    height: 16.135px;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 540;
-    line-height: 13px;
-    text-align: left;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 13;
-  }
-  .ruble-amount {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    width: 159px;
-    height: 12px;
-    top: 2.037px;
-    left: 124.119px;
-    color: #ffffff;
-    font-family: SF Pro expanded, var(--default-font-family);
-    font-size: 20px;
-    font-weight: 410;
-    line-height: 12px;
-    text-align: right;
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 14;
+    top: 52px;
   }
   
+  .main-container{
+    margin: 0 25px ;
+    width: calc(100%-50px);
+    height: 763px;
+  }
+
+.stockcharts {
+  width: 100%;
+  height: 390px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+    }
+.stockcharts a { 
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+    }
+.stockcharts a:hover { 
+  background-color: #ccc; 
+}
+.stockcharts a.active { 
+  background-color: #4CAF50; 
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: #949B96;
+  border-radius: 3px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #C5C5C5;
+  border-radius: 3px;
+  width: 100%;
+}
