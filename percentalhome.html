@@ -154,5 +154,22 @@
       <div class="linebottom">
 
       </div>
-   </body>
+    
+  </body>
+    <script>
+          document.querySelector('.results-btn').addEventListener('click', function() {
+            var initialInvestment = document.getElementById('range-number-ii').innerText;
+            var monthlyReinvestment = document.getElementById('range-number-mr').innerText;
+            var timePeriod = document.getElementById('range-number-tp').innerText;
+            var investmentGoal = document.querySelector('input[name="question0"]:checked').nextElementSibling.innerText;
+            var importance = document.querySelector('input[name="question2"]:checked').nextElementSibling.innerText;
+            var data = `Первоначальное вложение: ${initialInvestment}\nЕжемесячное пополнение: ${monthlyReinvestment}\nСрок инвестиций: ${timePeriod}\nЦель инвестиций: ${investmentGoal}\nУкажите, что для вас важнее: ${importance}`;
+            var a = document.createElement('a');
+            a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+            a.download = 'data.txt';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);});
+      </script>
 </html>

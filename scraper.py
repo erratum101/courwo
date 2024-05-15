@@ -1,6 +1,5 @@
 import requests
 import datetime
-import pathlib
 import apimoex
 import pandas as pd
 
@@ -19,16 +18,14 @@ with requests.session() as session:
     for TICK in TICKs:
         process += 1
         print((process / len(TICKs)) * 100, ' %')
-        
+    
         data = apimoex.get_board_history(session, TICK, board=board, start=yesterday, end=yesterday)
-        
-        if data:
-            df = pd.DataFrame(data)
-            df = df[['TRADEDATE', 'CLOSE']]
-            for index, row in df.iterrows():
-                ticker_data = "{}, {}\n".format(TICK, row['CLOSE']) 
-                output_file.write(ticker_data)
-        else:
-            print(f"No data for {TICK}")
-
+    if data:
+        df = pd.DataFrame(data)
+        df = df[['TRADEDATE', 'CLOSE']]
+        for index, row in df.iterrows():
+            ticker_data = "{}, {}\n".format(TICK, row['CLOSE']) 
+            output_file.write(ticker_data)
+    else : 
+        print("No data for {TICK}")
 output_file.close()
