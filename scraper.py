@@ -6,7 +6,7 @@ import pandas as pd
 board = 'TQBR'
 current_time = datetime.datetime.now().time()
 
-yesterday = datetime.date.today() - datetime.timedelta(days=1)
+yesterday = datetime.date.today() - datetime.timedelta(days=3)
 
 with open("C:/Dor/courwo/TICK.txt", "r") as TICKs:
     TICKs = [line.rstrip() for line in TICKs]

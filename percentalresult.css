@@ -1,24 +1,53 @@
 :root {
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+  --default-font-family: -apple-system;
 }
-
-.main-container {
-  overflow: hidden;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-.main-container,
-.main-container * {
-  box-sizing: border-box;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
-input,
-select,
-textarea,
-button {
-  outline: 0;
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+  background-color: #2C423F;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container {
@@ -39,46 +68,52 @@ button {
   margin: 9px 0 0 29px;
   z-index: 3;
 }
-.frame {
-  flex-shrink: 0;
+.head{
+  display: block;
   position: relative;
-  width: 47px;
-  height: 38px;
-  z-index: 3;
-  overflow: hidden;
+  width: 100%;
+  height: 52px;
+  padding: 10px 0;
 }
-.logo {
-  position: relative;
-  width: 40.424px;
-  height: 30.648px;
-  margin: 3.283px 0 0 3.063px;
-  background: url(./assets/images/aa4653b4-32c1-4bb5-b7fa-51707484ebe0.png)
-    no-repeat center;
-  background-size: 100% 100%;
-  z-index: 4;
-}
-.percental {
+.logo{
   flex-shrink: 0;
-  position: relative;
-  height: 8.667px;
-  color: #ffffff;
-  font-family: SF Pro, var(--default-font-family);
+  position: absolute;
+  width: 45px;
+  height: 36px;
+  top: 10px;
+  left: 20px;
+  background: url(./lib/images/logo.svg)
+}
+.percental{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  color: #C5C5C5;
+  font-family: SF Pro expanded , var(--default-font-family);
+  font-weight: 200;
   font-size: 24px;
-  font-weight: 270;
-  line-height: 8.667px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 1;
+  line-height: 13px;
+  left: 75px;
+  top: 19px;
+  transition: 0.3s;
 }
-.line {
-  position: relative;
-  width: 434px;
+@media(hover: hover){
+  .percental:hover{
+      color: #ffffff;
+
+  }
+}
+@media(hover: none){
+  .percental:active{
+      color: #ffffff;
+  }
+}
+.line{
+  position: absolute;
   height: 1px;
-  margin: 4px 0 0 0;
-  background: url(./assets/images/4082bc84-889c-45ca-b0be-cf6f3e28ac9b.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 2;
+  width: 100%;
+  background-color: #4C5B61;
+  top: 52px;
 }
 .flex-row-be {
   position: relative;
@@ -247,7 +282,7 @@ button {
   height: 34px;
   top: 5px;
   left: 6px;
-  background: url(./assets/images/df19a9d1-ffcf-42a9-9f8e-c3faef54153d.png)
+  background: url(./lib/images/Rubl.png)
     no-repeat center;
   background-size: cover;
   z-index: 21;
@@ -345,7 +380,7 @@ button {
   height: 389.636px;
   top: 0;
   left: 352px;
-  background: url(./assets/images/2f970d26-31d9-4141-952d-0d396690b0d9.png)
+  background: url(./lib/)
     no-repeat center;
   background-size: cover;
   z-index: 54;
@@ -368,7 +403,7 @@ button {
   height: 34px;
   top: 5.091px;
   left: 5px;
-  background: url(./assets/images/ce9d4cfe-66a0-4140-8379-5849cfb5d69f.png)
+  background: url(./lib/images/Dollar.png)
     no-repeat center;
   background-size: cover;
   z-index: 7;
@@ -472,7 +507,7 @@ button {
   height: 34px;
   top: 5px;
   left: 6px;
-  background: url(./assets/images/fc309888-717d-4543-9f01-fa44ed878971.png)
+  background: url(./lib/images/silver.png)
     no-repeat center;
   background-size: cover;
   z-index: 65;
@@ -590,7 +625,7 @@ button {
   height: 34px;
   top: 4.941px;
   left: 5px;
-  background: url(./assets/images/8b31add2-9608-455a-af6f-863645838954.png)
+  background: url(./lib/images/Euro.png)
     no-repeat center;
   background-size: cover;
   z-index: 49;
@@ -691,7 +726,7 @@ button {
   height: 34px;
   top: 5px;
   left: 6px;
-  background: url(./assets/images/bd2c4ce9-01bb-48bf-9a3c-15d072a48092.png)
+  background: url(./lib/images/Gold.png)
     no-repeat center;
   background-size: cover;
   z-index: 66;
@@ -809,7 +844,7 @@ button {
   height: 34px;
   top: 5px;
   left: 6px;
-  background: url(./assets/images/788848ac-08bb-44c8-bff2-109533ba2855.png)
+  background: url(./lib/images/MTC.png)
     no-repeat center;
   background-size: cover;
   z-index: 42;
@@ -820,7 +855,7 @@ button {
   width: 34px;
   height: 34px;
   margin: -0.04px 0 0 0;
-  background: url(./assets/images/d184c483-d141-4085-9ce1-166859ac22b4.png)
+  background: url(./lib/images/MTC.png)
     no-repeat center;
   background-size: cover;
   z-index: 67;
@@ -921,7 +956,7 @@ button {
   height: 34px;
   top: 5.298px;
   left: 5px;
-  background: url(./assets/images/6e6b1de4c691af524afe6bc7b1c93000e7bdbc7d.png)
+  background: url(./lib/images/Яндекс.png)
     no-repeat center;
   background-size: cover;
   z-index: 18;
